@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- link para que funquen las librerias AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>institucional</title>
 </head>
 <body>
@@ -44,7 +46,7 @@
 
         <div class="grid-item columna-izquierda">
             
-            <H1 class="valores">Valores</H1>
+            <H1 data-aos="fade-right" class="valores">Valores</H1>
             <ul class="lista-valores" >
                 <li>Respeto</li>
                 <li>Responsabilidad</li>
@@ -52,17 +54,17 @@
                 <li>Esfuerzo personal</li>
             </ul>
 
-            <h1 class="ideario">Ideario</h1>
+            <h1 data-aos="fade-right" class="ideario">Ideario</h1>
             <p class="texto-ideario">Los educandos son el centro del acto educativo.
                 Los docentes acompañan la trayectoria educativa particular de cada persona.
                 La educación es intregral, se aprende desde lo cognitivo, lo emocional y lo social.
             </p>
 
-            <h1 class="mision">Mision</h1>
+            <h1 data-aos="fade-right" class="mision">Mision</h1>
             <P class="texto-mision">Promover la formación de profesionales reflexivos y críticos sensibles a las necesidades de su entorno 
             </P>
 
-            <H1 class="vision">Vision</H1>
+            <H1 data-aos="fade-right" class="vision">Vision</H1>
             <p class="texto-vision">Vivenciar una trayectoria educativa donde prevalezca la tolerancia, el compromiso y la empatía, consolidando la per
             </p>
         </div>
@@ -187,5 +189,12 @@
         </aside>
     
     </footer>
+
+  <!--scripts para que funquen las librerias de AOS-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      AOS.init();
+  </script>
+
 </body>
 </html>
