@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+<!-- link para que funquen las librerias AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>como-llegar</title>
 </head>
 
@@ -46,7 +49,8 @@
     
 
         <div class="main-items transportes">
-            <div class="back-colectivo">
+
+            <div data-aos="fade-right" class="back-colectivo">
                 <H1 class="colectivo">En colectivo:</H1>
             </div>
             
@@ -57,7 +61,7 @@
                 <li>Desde JCP: 239</li>
             </ul>
 
-            <div class="back-tren">
+            <div data-aos="fade-right" class="back-tren">
                 <H1 class="tren">En tren:</H1>
             </div>
 
@@ -170,5 +174,16 @@
         </aside>
     
     </footer>
+
+
+
+    <!--scripts para que funquen las librerias de AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
+
+
 </html>

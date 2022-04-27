@@ -437,6 +437,11 @@ footer aside{
     margin-bottom: 20px;
 }
 
+.transportes:hover>ul{
+    transform: translateX(20px);
+    transition: all 1s;
+}
+
 
 
 .back-colectivo{
