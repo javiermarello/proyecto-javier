@@ -18,7 +18,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-}
+} 
 
 
 .header section {
@@ -27,7 +27,7 @@
 
 .header nav {
     display: flex;
-    margin: 100px;
+    margin: 30px;
 }
 
 .header nav ul {
@@ -106,7 +106,6 @@ header section img {
 .section__2 {
     display: flex;
     flex-direction: row;
-
     margin: 15px;
     height: 25rem;
     width: 98%;
@@ -390,6 +389,18 @@ footer aside {
     line-height: 30px;
 
 }
+
+/*------HAGO RESPONSIVE EL HEADER----------*/
+
+@media (max-width: 450px) {
+    .header-institucional{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+    }
+}
+
+
 
 /* -------HAGO RESPONSIVE EL MAIN------------ */
 
