@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/2bc7a1da1f.js" crossorigin="anonymous"></script>
     <!-- link para que funquen las librerias AOS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/backup.css">
     <title>como-llegar</title>
 
 </head>
@@ -125,26 +125,36 @@
 
 
     <!--FOOTER-->
-    <footer class="footer-comollegar">
+    <footer">
 
-        <section>
+        
+        <section class="grid-footer">
 
-            <ul class="buscados">
-                <li><strong>CURSOS MAS BUSCADOS</strong></li>
-                <li>curso de idioma portugues</li>
-                <li>curso de idioma ingles</li>
-                <li>curso de idioma aleman</li>
-                <li>curso de idioma frances</li>
-            </ul>
-            <ul>
-                <li><strong>CURSOS MAS VENDIDOS</strong></li>
-                <li>curso de idioma portugues</li>
-                <li>curso de idioma aleman</li>
-                <li>curso de idioma chino</li>
-            </ul>
+            <!-- PRIMER CONTENEDOR -->
 
+            <div class="container-buscados">
+                <ul class="buscados">
+                    <li><strong>CURSOS MAS BUSCADOS</strong></li>
+                    <li>curso de idioma portugues</li>
+                    <li>curso de idioma ingles</li>
+                    <li>curso de idioma aleman</li>
+                    <li>curso de idioma frances</li>
+                </ul>
+            </div>
 
-            <div class="section__footer">
+            <div class="container-vendidos">
+                <ul class="vendidos">
+                    <li><strong>CURSOS MAS VENDIDOS</strong></li>
+                    <li>curso de idioma portugues</li>
+                    <li>curso de idioma aleman</li>
+                    <li>curso de idioma chino</li>
+                </ul>
+            </div>
+
+            <!-- SEGUNDO CONTENEDOR -->
+            <div class="container-pagos">
+
+            <div class="pagos">
 
                 <P><strong>FORMAS DE PAGO</strong></P>
                 <form>
@@ -156,7 +166,7 @@
                     </select>
                 </form>
 
-                <p><strong>PROMOCIONES</strong></p>
+                <p class="promociones"><strong>PROMOCIONES</strong></p>
 
                 <form>
                     <select name="PROMOCIONES">
@@ -167,20 +177,21 @@
                 </form>
 
             </div>
-        </section>
+            </div>
 
 
-        <!--seccion contactos-->
 
-
-        <aside>
+            <!-- TERCER CONTENEDOR -->
+        <div class="grid-logo">
 
             <div class="logo-footer">
 
                 <section class="marca-footer">
 
-                    <img class="logo" src="logonuevo.png" alt="logo">
-                    <h1 class="texto__logo">CURS.O.S</h1>
+                    <a class="navbar-brand" href="#">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        CURS.O.S
+                    </a>
 
                 </section>
 
@@ -190,36 +201,38 @@
                 </section>
 
             </div>
+        </div>
 
+
+            <!-- CUARTO CONTENEDOR -->
+
+                <div class="grid-redes">
             <div class="footer-derecha">
 
                 <section class="redes">
-
-                    <img class="logo-ig" src="logotipo-de-instagram.png" alt="logo-ig">
-
-                    <img class="logo-face" src="logo-de-facebook.png" alt="logo-face">
-
-                    <img class="logo-wp" whatsapp src="logo-de-whatsapp.png" alt="logo-wp">
-
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
                 </section>
 
                 <section class="telefono">
 
-                    <img class="phone" src="logo-telefono.png" alt="phone">
+                    <i class="fa-solid fa-phone icono-telefono"></i>
                     <p class="numero">4324-5342</p>
 
                 </section>
 
                 <section class="mail">
 
-                    <img class="email" src="logo-email.png" alt="email">
+                    <i class="fa-solid fa-paper-plane icono-mail"></i>
                     <p class="dirmail">consultas@cursosweb.com</p>
 
                 </section>
 
             </div>
+        </div>
 
-        </aside>
+        </section>
 
     </footer>
 
