@@ -1,0 +1,21 @@
+/* Condiciones */
+
+/* if (condicion){ se ejecuta este codigo} else {se ejecuta este otro} */ 
+
+/*@mixin modos ($darkMode){
+@if $darkMode == black{
+    border: solid 2px blue;
+} @else{
+    border: solid 2px turquoise;
+}
+}
+
+genero un mixin
+
+.bg-condicion{
+    @include modos (black)
+}
+ 
+.bg-condicion-2{
+    @include modos (orange)
+}*/

@@ -147,35 +147,6 @@ header section img {
 
 }
 
-.container-pagos {
-    display: flex;
-    align-content: space-around;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: grey;
-    padding: 20px 0 20px 0;
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border: 0px solid #000000;
-    -webkit-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-    box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-
-}
-
-.pagos {
-    display: flex;
-    /* margin: 60px 30px 60px 240px; */
-    flex-direction: column;
-    justify-content: space-around;
-
-}
-
-.promociones {
-    margin-top: 30px;
-}
 
 .container-buscados {
     display: flex;
@@ -209,6 +180,66 @@ header section img {
 }
 
 
+.container-pagos {
+    display: flex;
+    align-content: space-around;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: grey;
+    padding: 20px 0 20px 0;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    -webkit-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
+
+}
+
+.pagos {
+    display: flex;
+    /* margin: 60px 30px 60px 240px; */
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.promociones {
+    margin-top: 30px;
+}
+
+
+
+
+
+.grid-logo {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+}
+
+.logo-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .grid-redes {
     grid-column-start: 3;
@@ -232,23 +263,6 @@ header section img {
     box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
 }
 
-.grid-logo {
-    display: grid;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    padding-left: 50px;
-    padding-right: 50px;
-    align-items: center;
-
-
-}
-
-.logo-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-}
 
 .redes {
     display: flex;
@@ -268,7 +282,7 @@ header section img {
 }
 
 .mail {
-    display: flex;
+    display: flex;   
     flex-direction: row;
     margin-top: 20px;
 }
