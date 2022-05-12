@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   width: 100%;
   height: 100%;
   background: linear-gradient(to left, rgba(255, 255, 255, 0.164), rgba(255, 255, 255, 0.486)), url("../imagen-header.jpg");
@@ -71,7 +72,7 @@
   align-items: center;
   background-color: black;
   height: 60px;
-  padding: 10px 0 10px 45px;
+  padding: 20px 0 10px 45px;
   color: white;
   font-size: 30px;
 }
@@ -97,7 +98,7 @@
   margin: auto;
   margin-left: 40px;
   font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .main .titulo-curso .titulo-portugues:hover {
   color: #0000af;
@@ -125,7 +126,7 @@
 .section__2 .container-carrusel1 .texto-foto {
   font-size: 30px;
   -webkit-text-stroke: 1px black;
-  font-family: arial;
+  font-family: "Poppins", sans-serif;
   color: white;
 }
 @media screen and (max-width: 450px) {
@@ -152,31 +153,39 @@
 }
 .grid-footer .container-buscados {
   display: flex;
-  background-color: grey;
+  background-color: gray;
   padding: 10px 0 10px 0;
   border-radius: 10px 10px 10px 10px;
   -moz-border-radius: 10px 10px 10px 10px;
   -webkit-border-radius: 10px 10px 10px 10px;
   border: 0px solid #000000;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   -webkit-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
 }
+.grid-footer .container-buscados .titulo-buscados {
+  list-style: none;
+  font-size: 25px;
+}
 .grid-footer .container-vendidos {
   display: flex;
-  background-color: grey;
+  background-color: gray;
   padding: 10px 0 10px 0;
   border-radius: 10px 10px 10px 10px;
   -moz-border-radius: 10px 10px 10px 10px;
   -webkit-border-radius: 10px 10px 10px 10px;
   border: 0px solid #000000;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   -webkit-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
+}
+.grid-footer .container-vendidos .titulo-vendidos {
+  list-style: none;
+  font-size: 25px;
 }
 .grid-footer .container-pagos {
   display: flex;
@@ -184,7 +193,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: grey;
+  background-color: gray;
   padding: 20px 0 20px 0;
   border-radius: 10px 10px 10px 10px;
   -moz-border-radius: 10px 10px 10px 10px;
@@ -233,7 +242,7 @@
 .grid-footer .container-pagos .grid-redes .footer-derecha {
   display: flex;
   flex-direction: column;
-  background-color: grey;
+  background-color: gray;
   padding: 10px 0 10px 0;
   border-radius: 10px 10px 10px 10px;
   -moz-border-radius: 10px 10px 10px 10px;
