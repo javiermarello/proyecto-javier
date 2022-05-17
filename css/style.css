@@ -1,27 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap");
+.grid-footer .container-pagos .grid-redes .footer-derecha .mail, .grid-footer .container-pagos .grid-redes .footer-derecha .telefono, .grid-footer .container-pagos .grid-redes .footer-derecha .redes {
+  display: flex;
+  flex-direction: row;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*  @mixin flex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-
-  PARA LLAMAR AL MIXIN */
-/*@mixin flex ($flex, $align) {
-     display: $flex;
-     align-items: $align;
- }
-
-
-.subtitulo{
-    @include flex(flex, center)
-
-}*/
 /* HEADER - INDEX */
 .header {
   display: flex;
@@ -118,6 +106,8 @@
   grid-row-gap: 20px;
   margin-top: 50;
   justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
 }
 .section__2 .container-carrusel1 {
   display: flex;
@@ -137,6 +127,8 @@
     grid-row-gap: 10px;
     margin-top: 30px;
     justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
 
@@ -147,6 +139,8 @@
   grid-template-rows: 1fr 1fr;
   margin: 200px 40px 30px 40px;
   gap: 30px;
+  grid-template-columns: 1fr 1fr 2 fr;
+  grid-template-rows: 1fr 1fr;
   /*primer contenedor*/
   /*segundo contenedor*/
   /*tercer contenedor*/
@@ -155,14 +149,10 @@
   display: flex;
   background-color: gray;
   padding: 10px 0 10px 0;
-  border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
-  border: 0px solid #000000;
   justify-content: center;
   align-items: flex-start;
-  -webkit-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
+  border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
   box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
 }
 .grid-footer .container-buscados .titulo-buscados {
@@ -174,13 +164,9 @@
   background-color: gray;
   padding: 10px 0 10px 0;
   border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
   border: 0px solid #000000;
   justify-content: center;
   align-items: flex-start;
-  -webkit-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
 }
 .grid-footer .container-vendidos .titulo-vendidos {
@@ -196,11 +182,7 @@
   background-color: gray;
   padding: 20px 0 20px 0;
   border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
   border: 0px solid #000000;
-  -webkit-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
   /*cuarto contenedor*/
   /*quinto contenedor*/
@@ -216,11 +198,11 @@
 }
 .grid-footer .container-pagos .grid-logo {
   display: grid;
-  grid-column-start: 1;
-  grid-column-end: 3;
   padding-left: 50px;
   padding-right: 50px;
   align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 .grid-footer .container-pagos .grid-logo .logo-footer {
   display: flex;
@@ -238,6 +220,8 @@
   display: grid;
   grid-column-start: 3;
   grid-column-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 .grid-footer .container-pagos .grid-redes .footer-derecha {
   display: flex;
@@ -245,13 +229,9 @@
   background-color: gray;
   padding: 10px 0 10px 0;
   border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
   border: 0px solid #000000;
   justify-content: center;
   align-items: center;
-  -webkit-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
 }
 .grid-footer .container-pagos .grid-redes .footer-derecha .redes {
@@ -283,6 +263,8 @@
     grid-template-rows: none;
     grid-row-gap: 10px;
     margin-top: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
   }
 }
 

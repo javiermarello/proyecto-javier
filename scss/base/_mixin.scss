@@ -1,21 +1,10 @@
-/*  @mixin flex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
+@mixin grid($startcolumn, $endcolumn){
+    grid-column-start: $startcolumn;
+    grid-column-end: $endcolumn;
 
-  PARA LLAMAR AL MIXIN */
- 
- /*@mixin flex ($flex, $align) {
-     display: $flex;
-     align-items: $align;
- }
+}
 
- 
-.subtitulo{
-    @include flex(flex, center)
-
-}*/
-
-
-
+@mixin grid-template($column, $rows){
+    grid-template-columns: $column;
+    grid-template-rows: $rows;
+}
