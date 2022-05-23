@@ -1,0 +1,158 @@
+/* FOOTER */
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 200px 40px 30px 40px;
+    gap: 30px;
+    @include grid-template (1fr 1fr 2 fr, 1fr 1fr);
+
+    /*primer contenedor*/
+    .container-buscados {
+        display: flex;
+        background-color: $bg-contenedores;
+        padding: 10px 0 10px 0;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: map-get($estilo-contenedores, radio-contenedor);
+        border: map-get($estilo-contenedores, borde-contenedor);
+        box-shadow: map-get($estilo-contenedores, sombra-contenedor);
+
+        .titulo-buscados {
+            list-style: none;
+            font-size: 25px;
+        }
+
+    }
+
+    /*segundo contenedor*/
+    .container-vendidos {
+        display: flex;
+        background-color: $bg-contenedores;
+        padding: 10px 0 10px 0;
+        border-radius: map-get($estilo-contenedores, radio-contenedor);
+        border: map-get($estilo-contenedores, borde-contenedor);
+        justify-content: center;
+        align-items: flex-start;
+        box-shadow: map-get($estilo-contenedores, sombra-contenedor);
+
+
+        .titulo-vendidos {
+            list-style: none;
+            font-size: 25px;
+        }
+
+
+    }
+
+    /*tercer contenedor*/
+    .container-pagos {
+        display: flex;
+        align-content: space-around;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: $bg-contenedores;
+        padding: 20px 0 20px 0;
+        border-radius: map-get($estilo-contenedores, radio-contenedor);
+        border: map-get($estilo-contenedores, borde-contenedor);
+        box-shadow: map-get($estilo-contenedores, sombra-contenedor);
+
+        .pagos {
+            display: flex;
+            /* margin: 60px 30px 60px 240px; */
+            flex-direction: column;
+            justify-content: space-around;
+
+            .promociones {
+                margin-top: 30px;
+            }
+        }
+
+        /*cuarto contenedor*/
+        .grid-logo {
+            display: grid;
+            // grid-column-start: 1;
+            // grid-column-end: 3;
+            padding-left: 50px;
+            padding-right: 50px;
+            align-items: center;
+            @include grid(1, 3);
+
+            .logo-footer {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+
+            @media screen and (max-width: 450px) {
+                display: grid;
+                grid-row-start: 5;
+                grid-row-end: 6;
+            }
+        }
+
+        /*quinto contenedor*/
+
+        .grid-redes {
+            display: grid;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            @include grid(3, 4);
+
+
+            .footer-derecha {
+                display: flex;
+                flex-direction: column;
+                background-color: $bg-contenedores;
+                padding: 10px 0 10px 0;
+                border-radius: map-get($estilo-contenedores, radio-contenedor);
+                border: map-get($estilo-contenedores, borde-contenedor);
+                justify-content: center;
+                align-items: center;
+                box-shadow: map-get($estilo-contenedores, sombra-contenedor);
+
+
+                .redes {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    margin-top: 50px;
+                    @extend %flex;
+                }
+
+                .telefono {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 20px;
+                    @extend %flex;
+
+                    .icono-telefono {
+                        margin-right: 10px;
+                    }
+                }
+
+                .mail {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 20px;
+                    @extend %flex;
+
+                    .icono-mail {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-row-gap: 10px;
+        margin-top: 30px;
+        @include grid-template (1fr, none);
+    }
+}

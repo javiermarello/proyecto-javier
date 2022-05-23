@@ -23,15 +23,15 @@
     <meta name="keywords"
         content="Cursos, profesores nativos, idiomas, ingles, portugues, frances, aleman, chino, lenguaje">
 
-        <!-- Open graph. (lo aplico a todos los html) cuando compartimos en redes sociales es la info que va a aparecer-->
-        <!-- type -->
-        <meta property:'og:type' content="web site">
-        <!-- title -->
-        <meta property:'og:title' content="curs.o.s | Cursos Online las 24 hs">
-        <!-- url. pondría la url del index de mi website-->
-        <meta property:'og:url' content="https://www....">
-        <!-- image. agrego la url de la imagen que quiero que se vea. por ejemplo el logo -->
-        <meta property:'og:image' content="https://www....">
+    <!-- Open graph. (lo aplico a todos los html) cuando compartimos en redes sociales es la info que va a aparecer-->
+    <!-- type -->
+    <meta property:'og:type' content="web site">
+    <!-- title -->
+    <meta property:'og:title' content="curs.o.s | Cursos Online las 24 hs">
+    <!-- url. pondría la url del index de mi website-->
+    <meta property:'og:url' content="https://www....">
+    <!-- image. agrego la url de la imagen que quiero que se vea. por ejemplo el logo -->
+    <meta property:'og:image' content="https://www....">
 
 
     <title>Cursos de idioma</title>
@@ -64,11 +64,13 @@
                             <a class="nav-link" href="como-llegar.html">COMO LLEGAR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">CURSOS</a>
+                            <a class="nav-link" href="cursos.html">CURSOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="consultas.html">CONSULTAS</a>
                         </li>
 
-                    </ul>
-                    </li>
+
                     </ul>
                 </div>
             </div>
@@ -88,7 +90,7 @@
         </section>
 
 
-        <!--SECCION 2 - carrusel compuesto por parrafo, lista no ordenada, imagen-->
+        <!------- MAIN ------->
 
         <section class="section__2">
 
@@ -104,7 +106,7 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="inglaterra.jpeg" class="d-block w-100" alt="imagen curso ingles online">
+                            <img src="imagenes/inglaterra.jpeg" class="d-block w-100" alt="imagen curso ingles online">
 
                             <div class="carousel-caption d-none d-sm-block">
                                 <h5 class="texto-foto">Curso de ingles</h5>
@@ -112,14 +114,14 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="francia.jpg" class="d-block w-100" alt="imagen curso frances online">
+                            <img src="imagenes/francia.jpg" class="d-block w-100" alt="imagen curso frances online">
                             <div class="carousel-caption d-none d-sm-block">
                                 <h5 class="texto-foto">Curso de frances</h5>
                                 <p>...</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="brasil.jpg" class="d-block w-100" alt="imagen curso portugues online">
+                            <img src="imagenes/brasil.jpg" class="d-block w-100" alt="imagen curso portugues online">
                             <div class="carousel-caption d-none d-sm-block">
                                 <h5 class="texto-foto">Curso de portugues</h5>
                                 <p>...</p>
@@ -149,6 +151,8 @@
                     <li class="list-group-item">Disponibilidad 24 x 7</li>
                     <li class="list-group-item">Proyectos grupales</li>
                     <li class="list-group-item">Intercambios culturales</li>
+                    <li class="list-group-item">Examenes semanales</li>
+                    <li class="list-group-item">Becas permanentes</li>
                 </ul>
             </div>
 
@@ -164,7 +168,10 @@
                             objetivo de
                             aprender un idioma tan apasionante y lleno de cultura como el portugués; sin comprometer los
                             contenidos
-                            que se abarquen a lo largo del curso.</p>
+                            que se abarquen a lo largo del curso.
+                            Aprenderás en meses lo que en cualquier otro curso te llevaría años, con la nueva
+                            metodología
+                            de enseñanza online de Curs.o.s desarrollada por profesionales.</p>
                         <a href="#" class="card-link">Conoce mas sobre nuestros cursos de idioma</a>
                         <a href="#" class="card-link">...</a>
                     </div>
@@ -176,6 +183,7 @@
 
     </main>
 
+    <!-- FOOTER -->
 
     <footer>
 
@@ -290,6 +298,11 @@
 
     </footer>
 
+    <!--scripts para que funquen las librerias de AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!--SCRIPTS DE BOOTSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
