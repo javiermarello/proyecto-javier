@@ -709,42 +709,42 @@ button{
 
 }
 
-.curso-aleman {
+.aleman {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
 }
 
-.curso-frances {
+.frances {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
 }
 
-.curso-italiano {
+.italiano {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
 }
 
-.curso-chino {
+.chino {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
 }
 
-.curso-portugues {
+.portugues {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
 }
 
-.curso-ingles {
+.ingles {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;

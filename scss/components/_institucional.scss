@@ -1,17 +1,15 @@
 .main-institucional {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 250px 600px;
+    grid-template-rows: 250px 700px;
     padding: 0 20px 0 20px;
     gap: 20px;
 
     .grid-item {
         padding: 5px;
         margin: 5px;
-        border-radius: 10px 10px 10px 10px;
-        -moz-border-radius: 10px 10px 10px 10px;
-        -webkit-border-radius: 10px 10px 10px 10px;
-        border: 0px solid #000000;
+        border-radius: map-get($estilo-contenedores, radio-contenedor);
+        border: map-get($estilo-contenedores, borde-contenedor);
     }
 
 
@@ -20,7 +18,7 @@
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 3;
-        padding: 20px;
+        padding: 40px 20px 20px 20px;
         background-color: rgb(219, 210, 210);
         border-radius: map-get($estilo-contenedores, radio-contenedor);
         border: map-get($estilo-contenedores, borde-contenedor);
@@ -28,55 +26,35 @@
 
 
         .valores {
-            background-color: black;
-            color: white;
-            font-size: 15px;
-            margin-bottom: 20px;
+            @extend %etiqueta-institucional;
         }
 
         .lista-valores {
-            list-style: none;
-            font-size: 20px;
-            margin-bottom: 35px;
+            @extend %lista-institucional;
         }
 
         .ideario {
-            background-color: black;
-            color: white;
-            font-size: 15px;
-            margin-bottom: 20px;
+            @extend %etiqueta-institucional;
         }
 
         .texto-ideario {
-            list-style: none;
-            font-size: 20px;
-            margin-bottom: 35px;
+            @extend %lista-institucional;
         }
 
         .mision {
-            background-color: black;
-            color: white;
-            font-size: 15px;
-            margin-bottom: 20px;
+            @extend %etiqueta-institucional;
         }
 
         .texto-mision {
-            list-style: none;
-            font-size: 20px;
-            margin-bottom: 35px;
+            @extend %lista-institucional;
         }
 
         .vision {
-            background-color: black;
-            color: white;
-            font-size: 15px;
-            margin-bottom: 20px;
+            @extend %etiqueta-institucional;
         }
 
         .texto-vision {
-            list-style: none;
-            font-size: 20px;
-            margin-bottom: 35px;
+            @extend %lista-institucional;
         }
 
         @media screen and (max-width: 450px) {
@@ -135,6 +113,9 @@
             grid-column-end: 2;
             grid-row-start: 3;
             grid-row-end: 4;
+            overflow-y: scroll;
+            grid-template-rows: 500px;
+
 
         }
 
@@ -144,6 +125,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-
+        gap: 5px;
+        padding-top: 20px;
     }
 }

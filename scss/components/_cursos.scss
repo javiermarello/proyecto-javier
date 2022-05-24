@@ -1,0 +1,108 @@
+.grid-cursos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 600px 600px;
+    align-items: center;
+    grid-template-areas: "aleman frances italiano"
+        "chino portugues ingles";
+    background-color: rgb(194, 187, 187);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    margin: 30px;
+
+    .ingles {
+        @extend %flex-banderas;
+        grid-area: ingles;
+
+        .bandera-ingl {
+            border-radius: map-get($estilo-contenedores, radio-contenedor);
+            border: map-get($estilo-contenedores, borde-contenedor);
+            box-shadow: map-get($estilo-contenedores, sombra-contenedor);
+
+        }
+
+    }
+
+    .aleman {
+        @extend %flex-banderas;
+        grid-area: aleman;
+
+        .bandera-alem {
+            border-radius: map-get($estilo-contenedores, radio-contenedor);
+            border: map-get($estilo-contenedores, borde-contenedor);
+            box-shadow: map-get($estilo-contenedores, sombra-contenedor);
+
+
+        }
+
+    }
+
+    .frances {
+        @extend %flex-banderas;
+        grid-area: frances;
+
+        .bandera-fran {
+            border-radius: map-get($estilo-contenedores, radio-contenedor);
+            border: map-get($estilo-contenedores, borde-contenedor);
+            box-shadow: map-get($estilo-contenedores, sombra-contenedor);
+
+        }
+
+    }
+
+    .italiano {
+        @extend %flex-banderas;
+        grid-area: italiano;
+
+        .bandera-ita {
+            border-radius: map-get($estilo-contenedores, radio-contenedor);
+            border: map-get($estilo-contenedores, borde-contenedor);
+            box-shadow: map-get($estilo-contenedores, sombra-contenedor);
+
+        }
+
+    }
+
+    .chino {
+        @extend %flex-banderas;
+        grid-area: chino;
+
+        .bandera-chino {
+            border-radius: map-get($estilo-contenedores, radio-contenedor);
+            border: map-get($estilo-contenedores, borde-contenedor);
+            box-shadow: map-get($estilo-contenedores, sombra-contenedor);
+
+        }
+
+    }
+
+    .portugues {
+        @extend %flex-banderas;
+        grid-area: portugues;
+
+        .bandera-port {
+            border-radius: map-get($estilo-contenedores, radio-contenedor);
+            border: map-get($estilo-contenedores, borde-contenedor);
+            box-shadow: map-get($estilo-contenedores, sombra-contenedor);
+
+        }
+
+    }
+
+    @media screen and (max-width: 450px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat (6, 300px);
+        align-items: center;
+        grid-template-areas: "aleman"
+            "frances"
+            "italiano"
+            "chino"
+            "portugues"
+            "ingles";
+        background-color: rgb(194, 187, 187);
+        margin: 30px;
+        border-radius: map-get($estilo-contenedores, radio-contenedor);
+    }
+}
