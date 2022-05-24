@@ -1,39 +1,30 @@
 .main-institucional {
-    margin: 20px;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 250px 750px;
-    font-family: Arial, Helvetica, sans-serif;
+    grid-template-rows: 250px 600px;
+    padding: 0 20px 0 20px;
     gap: 20px;
-   
 
-    
+    .grid-item {
+        padding: 5px;
+        margin: 5px;
+        border-radius: 10px 10px 10px 10px;
+        -moz-border-radius: 10px 10px 10px 10px;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border: 0px solid #000000;
+    }
+
 
     .columna-izquierda {
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 3;
-        padding: 5px;
-        border-radius: 10px 10px 10px 10px;
-        -moz-border-radius: 10px 10px 10px 10px;
-        -webkit-border-radius: 10px 10px 10px 10px;
-        border: 0px solid #000000;
-        -webkit-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-        box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-
+        padding: 20px;
         background-color: rgb(219, 210, 210);
-        list-style: none;
-        padding: 30px;
-
-        @media screen and (max-width: 450px) {
-            display: grid;
-            grid-row-start: 1;
-            grid-row-end: 2;
-            grid-row-gap: 10px;
-            margin-top: 30px;
-        }
+        border-radius: map-get($estilo-contenedores, radio-contenedor);
+        border: map-get($estilo-contenedores, borde-contenedor);
+        box-shadow: map-get($estilo-contenedores, sombra-contenedor);
 
 
         .valores {
@@ -44,16 +35,10 @@
         }
 
         .lista-valores {
-
+            list-style: none;
             font-size: 20px;
             margin-bottom: 35px;
-
-            @media screen and (max-width: 450px) {
-
-                font-size: 15px;
-            }
         }
-
 
         .ideario {
             background-color: black;
@@ -66,11 +51,6 @@
             list-style: none;
             font-size: 20px;
             margin-bottom: 35px;
-
-            @media screen and (max-width: 450px) {
-
-                font-size: 15px;
-            }
         }
 
         .mision {
@@ -84,11 +64,6 @@
             list-style: none;
             font-size: 20px;
             margin-bottom: 35px;
-
-            @media screen and (max-width: 450px) {
-
-                font-size: 15px;
-            }
         }
 
         .vision {
@@ -102,77 +77,73 @@
             list-style: none;
             font-size: 20px;
             margin-bottom: 35px;
+        }
 
-            @media screen and (max-width: 450px) {
+        @media screen and (max-width: 450px) {
+            display: grid;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
 
-                font-size: 15px;
-            }
         }
     }
 
-    .imagen-derecha {
+    .imagen-teach {
         grid-column-start: 2;
         grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
 
         .imagen-institucional {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            -webkit-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-            box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
+            border-radius: map-get($estilo-contenedores, radio-contenedor);
+            border: map-get($estilo-contenedores, borde-contenedor);
+            box-shadow: map-get($estilo-contenedores, sombra-contenedor);
 
-            border-radius: 10px 10px 10px 10px;
-            -moz-border-radius: 10px 10px 10px 10px;
-            -webkit-border-radius: 10px 10px 10px 10px;
-            border: 0px solid #000000;
         }
 
         @media screen and (max-width: 450px) {
             display: grid;
+            grid-column-start: 1;
+            grid-column-end: 2;
             grid-row-start: 2;
             grid-row-end: 3;
-            grid-row-gap: 10px;
-            margin-top: 30px;
 
         }
     }
 
     .texto-derecha {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
         background-color: rgb(219, 210, 210);
         padding: 20px 30px 20px 20px;
         font-size: 21px;
         line-height: 30px;
-        -webkit-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-        box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
+        border-radius: map-get($estilo-contenedores, radio-contenedor);
+        border: map-get($estilo-contenedores, borde-contenedor);
+        box-shadow: map-get($estilo-contenedores, sombra-contenedor);
 
-        border-radius: 10px 10px 10px 10px;
-        -moz-border-radius: 10px 10px 10px 10px;
-        -webkit-border-radius: 10px 10px 10px 10px;
-        border: 0px solid #000000;
 
         @media screen and (max-width: 450px) {
             display: grid;
+            grid-column-start: 1;
+            grid-column-end: 2;
             grid-row-start: 3;
             grid-row-end: 4;
-            grid-row-gap: 10px;
-            margin-top: 30px;
-            font-size: 15px;
 
         }
 
-
     }
-
 
     @media screen and (max-width: 450px) {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: none;
-        grid-row-gap: 10px;
-        margin-top: 30px;
-        @include grid-template (1fr, none);
-    }
+        grid-template-rows: auto;
 
+    }
 }
