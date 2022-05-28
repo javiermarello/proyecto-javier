@@ -46,11 +46,13 @@
             font-size: 20px;
             margin-bottom: 35px;
             line-height: 50px;
+
             &:hover {
                 transform: translateX(20px);
                 transition: all 1s;
+            }
         }
-    }
+
         .back-telefono {
             display: flex;
             align-items: flex-end;
@@ -71,11 +73,13 @@
             font-size: 25px;
             margin-bottom: 35px;
             line-height: 60px;
+
             &:hover {
                 transform: translateX(20px);
                 transition: all 1s;
+            }
         }
-    }
+
         .back-redes {
             display: flex;
             align-items: flex-end;
@@ -96,11 +100,13 @@
             font-size: 25px;
             margin-bottom: 35px;
             line-height: 60px;
+
             &:hover {
                 transform: translateX(20px);
                 transition: all 1s;
+            }
         }
-    }
+
         .red {
             display: flex;
             flex-direction: row;
@@ -111,6 +117,9 @@
                 margin-right: 5px;
             }
         }
+        @media screen and (max-width: 450px) {
+            margin: 15px 20px 15px 20px;
+    }
     }
 
     .grid-formulario {
@@ -148,67 +157,99 @@
         .contenido-server {
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: repeat (6  40px) ;
+            grid-template-rows: repeat (6 40px);
             grid-template-areas: "nombre-completo"
-             "mail" 
-             "dni"
-              "solicitud"
-              "tramite"
-              "comentarios"
-              "enviar";
+                "mail"
+                "dni"
+                "solicitud"
+                "tramite"
+                "comentarios"
+                "enviar";
             font-family: Arial, Helvetica, sans-serif;
             gap: 30px;
-            .nombre-completo{
+
+            .nombre-completo {
                 grid-area: nombre-completo;
             }
-            .mail{
+
+            .mail {
                 grid-area: mail;
             }
-            .dni{
+
+            .dni {
                 grid-area: dni;
             }
-            .solicitud{
+
+            .solicitud {
                 grid-area: solicitud;
             }
-            .tramites{
+
+            .tramites {
                 grid-area: tramites;
             }
-            .comentarios{
+
+            .comentarios {
                 grid-area: comentarios;
             }
-            .enviar{
+
+            .enviar {
                 grid-area: enviar;
             }
-            textarea{
+
+            textarea {
                 resize: none;
                 min-height: 200px;
                 width: 100%
             }
         }
+
+        @media screen and (max-width: 450px) {
+            margin: 15px 20px 15px 20px;
+        }
     }
 
-    .grid-imagenderecha{
+    .grid-imagenderecha {
         grid-area: grid-imagenderecha;
         background-color: rgb(219, 210, 210);
         margin-top: 20px;
-        
+
         border-radius: 10px 10px 10px 10px;
         -moz-border-radius: 10px 10px 10px 10px;
         -webkit-border-radius: 10px 10px 10px 10px;
         border: 0px solid #000000;
-    
+
         -webkit-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
         box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
-    
+
         margin-bottom: 20px;
-        .imagenderecha{
+
+        .imagenderecha {
             width: 100%;
-    height: 100%;
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border: 0px solid #000000;
+            height: 100%;
+            border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            border: 0px solid #000000;
+
+
+           
+        }
+        @media screen and (max-width: 450px) {
+            margin: 15px 20px 15px 20px;
         }
     }
+
+    @media screen and (max-width: 450px) {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 300px;
+        grid-template-areas: "grid-contactos"
+            "grid-imagenderecha"
+            "grid-formulario";
+        font-family: Arial, Helvetica, sans-serif;
+        gap: 10px;
+    }
+
 }

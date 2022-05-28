@@ -11,22 +11,25 @@
     justify-items: center;
     align-items: center;
     @include grid-template (1fr 1fr 1fr, auto);
-    background-color: gray;
+    background-color: rgb(141, 135, 128);
     border-radius: map-get($estilo-contenedores, radio-contenedor);
     border: map-get($estilo-contenedores, borde-contenedor);
     box-shadow: map-get($estilo-contenedores, sombra-contenedor);
 
 
-    .container-carrusel1 {
+    .container-carrusel {
         display: flex;
         align-items: stretch;
-
+        .d-sm-block{
+            
+            background-color: rgba(0, 0, 0, 0.423);
         .texto-foto {
             font-size: 30px;
             -webkit-text-stroke: 1px black;
             font-family: $font-style;
             color: white;
         }
+    }
     }
 
 

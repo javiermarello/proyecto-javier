@@ -72,14 +72,16 @@
                 transition: all 1s;
             }
         }
+
         @media screen and (max-width: 450px) {
-            margin: 10px;}
-      
+            margin: 20px;
+        }
+
     }
 
     .container-mapa {
         background-color: rgb(219, 210, 210);
-       
+
         border-radius: 10px 10px 10px 10px;
         -moz-border-radius: 10px 10px 10px 10px;
         -webkit-border-radius: 10px 10px 10px 10px;
@@ -89,9 +91,8 @@
         -moz-box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
         box-shadow: 19px 11px 13px -7px rgba(0, 0, 0, 0.75);
 
-        @media screen and (max-width: 450px) {
-            margin: 10px;}
-      
+
+
 
         .mapa {
             width: 100%;
@@ -100,8 +101,12 @@
             -moz-border-radius: 10px 10px 10px 10px;
             -webkit-border-radius: 10px 10px 10px 10px;
             border: 0px solid #000000;
-           
 
+
+        }
+
+        @media screen and (max-width: 450px) {
+            margin: 20px;
         }
     }
 
@@ -111,10 +116,9 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto 300px;
         grid-template-areas: "transportes"
-                            "container-mapa";
+            "container-mapa";
         font-family: Arial, Helvetica, sans-serif;
         gap: 10px;
-        
-        }
-}
 
+    }
+}

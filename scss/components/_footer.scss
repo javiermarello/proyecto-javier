@@ -2,19 +2,20 @@
 
 .grid-footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    margin: 200px 40px 30px 40px;
+    grid-template-areas: "buscados vendidos pagos"
+        "logo comunicacion redes";
+    margin: 100px 40px 30px 40px;
     gap: 30px;
-    @include grid-template (1fr 1fr 2 fr, 1fr 1fr);
+    @include grid-template (1fr 1fr 1fr, 1fr 1fr);
 
     /*primer contenedor*/
     .container-buscados {
+        grid-area: buscados;
         display: flex;
         background-color: $bg-contenedores;
         padding: 10px 0 10px 0;
-        justify-content: center;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
         border-radius: map-get($estilo-contenedores, radio-contenedor);
         border: map-get($estilo-contenedores, borde-contenedor);
         box-shadow: map-get($estilo-contenedores, sombra-contenedor);
@@ -28,13 +29,14 @@
 
     /*segundo contenedor*/
     .container-vendidos {
+        grid-area: vendidos;
         display: flex;
         background-color: $bg-contenedores;
         padding: 10px 0 10px 0;
         border-radius: map-get($estilo-contenedores, radio-contenedor);
         border: map-get($estilo-contenedores, borde-contenedor);
-        justify-content: center;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
         box-shadow: map-get($estilo-contenedores, sombra-contenedor);
 
 
@@ -48,6 +50,7 @@
 
     /*tercer contenedor*/
     .container-pagos {
+        grid-area: pagos;
         display: flex;
         align-content: space-around;
         flex-direction: column;
@@ -68,90 +71,114 @@
                 margin-top: 30px;
             }
         }
-
-        /*cuarto contenedor*/
-        .grid-logo {
-            display: grid;
-            padding-left: 50px;
-            padding-right: 50px;
-            align-items: center;
-            @include grid(1, 3);
-
-            .logo-footer {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-            }
-
-            @media screen and (max-width: 450px) {
-                display: grid;
-                grid-row-start: 5;
-                grid-row-end: 6;
-            }
-        }
-
-        /*quinto contenedor*/
-
-        .grid-redes {
-            display: grid;
-            grid-column-start: 3;
-            grid-column-end: 4;
-            @include grid(3, 4);
-
-
-            .footer-derecha {
-                display: flex;
-                flex-direction: column;
-                background-color: $bg-contenedores;
-                padding: 10px 0 10px 0;
-                border-radius: map-get($estilo-contenedores, radio-contenedor);
-                border: map-get($estilo-contenedores, borde-contenedor);
-                justify-content: center;
-                align-items: center;
-                box-shadow: map-get($estilo-contenedores, sombra-contenedor);
-
-
-                .redes {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
-                    margin-top: 50px;
-                    @extend %flex;
-                }
-
-                .telefono {
-                    display: flex;
-                    flex-direction: row;
-                    margin-top: 20px;
-                    @extend %flex;
-
-                    .icono-telefono {
-                        margin-right: 10px;
-                    }
-                }
-
-                .mail {
-                    display: flex;
-                    flex-direction: row;
-                    margin-top: 20px;
-                    @extend %flex;
-
-                    .icono-mail {
-                        margin-right: 10px;
-                    }
-                }
-            }
-        }
     }
 
-    @media screen and (max-width: 450px) {
+    /*cuarto contenedor*/
+    .container-logo {
+        grid-area: logo;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: none;
-        grid-row-gap: 10px;
-        margin: 20px;
-        gap: 20px;
-        
-        @include grid-template (1fr, none);
+        padding-left: 20px;
+        padding-right: 20px;
+        align-items: center;
+
+
+        .logo-footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+        }
     }
+
+    /*quinto contenedor*/
+
+    .container-comunicacion {
+        display: grid;
+        align-content: center;
+        @include grid(3, 4);
+        grid-area: comunicacion;
+        background-color: $bg-contenedores;
+        padding: 10px 0 10px 0;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: map-get($estilo-contenedores, radio-contenedor);
+        border: map-get($estilo-contenedores, borde-contenedor);
+        box-shadow: map-get($estilo-contenedores, sombra-contenedor);
+
+        .footer-derecha {
+
+
+            .telefono {
+                display: flex;
+                flex-direction: row;
+                margin-top: 20px;
+                @extend %flex;
+
+                .icono-telefono {
+                    font-size: 30px;
+                    margin-right: 10px;
+                }
+            }
+
+            .mail {
+                display: flex;
+                flex-direction: row;
+                margin-top: 20px;
+                @extend %flex;
+
+                .icono-mail {
+                    font-size: 30px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    /*sexto contenedor*/
+
+    .container-redes {
+        grid-area: redes;
+        display: grid;
+        align-items: center;
+        background-color: gray;
+        background-color: $bg-contenedores;
+        padding: 10px 0 10px 0;
+        border-radius: map-get($estilo-contenedores, radio-contenedor);
+        border: map-get($estilo-contenedores, borde-contenedor);
+        box-shadow: map-get($estilo-contenedores, sombra-contenedor);
+
+
+        .footer-redes {
+
+
+            .redes {
+                @extend %flex;
+                justify-content: space-around;
+
+                .fa-brands {
+                    font-size: 30px;
+
+                }
+            }
+
+        }
+    }
+
+
+
+
+@media screen and (max-width: 450px) {
+    display: grid;
+    @include grid-template (1fr, none);
+    grid-row-gap: 10px;
+    margin: 30px;
+    gap: 20px;
+    grid-template-areas: "buscados"
+                        "vendidos"
+                        "pagos"
+                        "comunicacion"
+                        "redes"
+                        "logo";
+
+}
 }
