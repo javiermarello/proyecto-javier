@@ -16,6 +16,7 @@
         padding: 10px 0 10px 0;
         flex-direction: column;
         align-items: center;
+        font-size: 20px;
         border-radius: map-get($estilo-contenedores, radio-contenedor);
         border: map-get($estilo-contenedores, borde-contenedor);
         box-shadow: map-get($estilo-contenedores, sombra-contenedor);
@@ -23,6 +24,7 @@
         .titulo-buscados {
             list-style: none;
             font-size: 25px;
+            padding: 10px;
         }
 
     }
@@ -33,6 +35,7 @@
         display: flex;
         background-color: $bg-contenedores;
         padding: 10px 0 10px 0;
+        font-size: 20px;
         border-radius: map-get($estilo-contenedores, radio-contenedor);
         border: map-get($estilo-contenedores, borde-contenedor);
         flex-direction: column;
@@ -43,6 +46,7 @@
         .titulo-vendidos {
             list-style: none;
             font-size: 25px;
+            padding: 15px;
         }
 
 
