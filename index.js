@@ -56,6 +56,7 @@ Selecciona Pagar*/
 // while (pago != ``)
 
 
+/*const cursos[aleman, portugues, italiano, frances, ingles, chino];
 
 class Inscripcion{
     constructor(nombreApellido, mail, dni, curso, pago, tarjeta, numTarjeta, mesTarjeta, añoTarjeta){
@@ -110,4 +111,84 @@ class Inscripcion{
     
     }
     while (pago != ``)
+    */
+
+
+
+
+arregloPersonas = [];
+arregloMail = [];
+arregloDni = [];
+arregloCursos = [];
+
+
+let nombreApellido = ``
+
+do{
+
+let nombreApellido = prompt("ingrese su nombre");
+if(nombreApellido != " "){
+arregloPersonas.push(nombreApellido.toUpperCase());
+}
+
+for(i=0; i < arregloPersonas.length; i++){
+
+    console.log(arregloPersonas[i]);
+
     
+}  
+}
+while (nombreApellido != ``)
+
+let mail = ``
+
+do{
+
+let mail= prompt("ingrese su correo electronico");
+if(mail != " "){
+arregloMail.push(mail);
+}
+
+for(i=0; i < arregloMail.length; i++){
+
+    console.log(arregloMail[i]);
+
+    
+}  
+}
+while (mail != ``)
+
+
+let dni = ``
+
+do{
+
+let dni= prompt("ingrese su numero de DNI");
+if(dni != " "){
+arregloDni.push(dni);
+}
+
+for(i=0; i < arregloDni.length; i++){
+
+    console.log(arregloDni[i]);
+
+}  
+}
+while (dni != ``)
+
+
+
+let cursos = ``
+
+do{
+
+let cursos= prompt("En que curso queres inscribirte?");
+if(cursos == "aleman" || cursos == "ingles" || cursos == "chino" || cursos == "frances" || cursos == "italiano" || cursos == "portugues"){
+arregloCursos.push(cursos);
+}
+
+cursos = prompt("El curso ingresado no esta disponible.")
+
+
+}
+while (cursos != ``)
