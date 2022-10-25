@@ -12,6 +12,8 @@
     <!--script para los iconos-->
     <script src="https://kit.fontawesome.com/2bc7a1da1f.js" crossorigin="anonymous"></script>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -85,14 +87,23 @@
 
         <div class="section-1">
             <h1 class="subtitulo"> Cursos online las 24 hs </h1>
-        </div>
 
-        <section class="titulo-curso">
-            <h2 class="titulo-portugues">COMPLETA EL FORMULARIO PARA INSCRIBIRTE EN FORMA ONLINE </h2>
-        </section>
+
+            <button id="btnModalLogin" class="btn btn-outline-primary me-2 toggles" type="button" data-bs-toggle="modal"
+                data-bs-target="#modalLogin">Login</button>
+            <button id="btnLogout" class="btn btn-outline-secondary d-none toggles" type="button">Logout</button>
+            <p id="nombreUsuario" class="d-none toggles"></p>
+
+
+        </div>
 
     </section>
 
+
+
+    <section class="titulo-curso">
+        <h2 class="titulo-portugues">COMPLETA EL FORMULARIO PARA INSCRIBIRTE EN FORMA ONLINE </h2>
+    </section>
 
 
 
@@ -162,33 +173,8 @@
             <form class="contenido-server" action="/server/" method="post">
 
 
-                <!-- input radio -->
 
 
-                <div class="curso">
-                    <fieldset>
-                        <legend>Selecione curso</legend>
-                        <input type="radio" name="aleman" id="aleman">
-                        <label for="aleman">Aleman</label>
-
-                        <input type="radio" name="ingles" id="ingles">
-                        <label for="ingles">Ingles</label>
-
-                        <input type="radio" name="chino" id="chino">
-                        <label for="chino">Chino</label>
-
-                        <input type="radio" name="portugues" id="portugues">
-                        <label for="portugues">Portugues</label>
-
-                        <input type="radio" name="italiano" id="italiano">
-                        <label for="italiano">Italiano</label>
-
-                        <input type="radio" name="frances" id="frances">
-                        <label for="frances">Frances</label>
-
-
-                    </fieldset>
-                </div>
 
 
 
@@ -196,8 +182,9 @@
                 <div class="nombre-completo">
                     <label for="full name">Nombre completo</label>
                     <!-- input text -->
-                    <input type="text" id="full name">
+                    <input type="text" id="fullName">
                 </div>
+
 
                 <!-- input mail -->
                 <div class="mail">
@@ -205,43 +192,79 @@
                     <input type="email" name="mail" id="mail">
                 </div>
 
-
                 <!-- input number -->
-                <div class="dni">
-                    <label for="numeroDNI">Numero de Documento</label>
-                    <input type="DNI" name="numeroDNI" id="numeroDNI">
-                </div>
-
-                <!-- input radio -->
-
-
-                <div class="pago">
-                    <fieldset>
-                        <legend>Forma de Pago</legend>
-                        <input type="radio" name="efectivo" id="efectivo">
-                        <label for="efectivo">Efectivo</label>
-
-                        <input type="radio" name="tarjeta" id="tarjeta">
-                        <label for="tarjeta">Tarjeta</label>
-
-
-                    </fieldset>
+                <div class="password">
+                    <label for="numeroDNI">Contraseña</label>
+                    <input type="pass" name="password" id="pass">
                 </div>
 
 
                 <!-- input radio -->
 
-                <div class="Tarjeta">
+
+                <div class="curso">
                     <fieldset>
-                        <legend>Selecione tarjeta</legend>
-                        <input type="radio" name="visa" id="visa">
-                        <label for="visa">Visa</label>
+                        <legend>Selecione curso</legend>
 
-                        <input type="radio" name="master" id="master">
-                        <label for="master">Mastercard</label>
+                        <div class="radios">
 
+                            <input type="radio" name="aleman" id="aleman" value="aleman">
+                            <label for="aleman">Aleman</label>
+
+                            <input type="radio" name="ingles" id="ingles" value="ingles">
+                            <label for="ingles">Ingles</label>
+
+                            <input type="radio" name="chino" id="chino" value="chino">
+                            <label for="chino">Chino</label>
+
+                            <input type="radio" name="portugues" id="portugues" value="portugues">
+                            <label for="portugues">Portugues</label>
+
+                            <input type="radio" name="italiano" id="italiano" value="italiano">
+                            <label for="italiano">Italiano</label>
+
+                            <input type="radio" name="frances" id="frances" value="frances">
+                            <label for="frances">Frances</label>
+
+                        </div>
                     </fieldset>
                 </div>
+
+
+
+
+
+
+                <!-- Modal info -->
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                    id="botonInfo">
+                    Consultar curso seleccionado
+                </button>
+
+              
+
+                <!-- input select -->
+
+
+                <select class="form-select form-select-lg" aria-label="Large select" id="formaPago">
+                    <option selected="">Elegí la forma de pago</option>
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Tarjeta">Tarjeta</option>
+                    <option value="Transferencia">Transferencia</option>
+                </select>
+
+
+                <!-- input select -->
+
+
+                <select class="form-select form-select-lg" aria-label="Large select" id="tarjetas">
+                    <option selected="">Con que tarjeta desea abonar</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Master">Mastercard</option>
+                    <option value="Amex">Amex</option>
+                </select>
 
                 <!-- input number -->
                 <div class="NumTarjeta">
@@ -250,23 +273,21 @@
                 </div>
 
                 <!-- input number -->
-                <div class="mesVencTarjeta">
-                    <label for="mesTarjeta">Mes de vencimiento</label>
-                    <input type="Tarjeta" name="mesTarjeta" id="mesTarjeta">
+                <div class="claveVencTarjeta">
+                    <label for="claveTarjeta">Clave de 3 digitos</label>
+                    <input type="Tarjeta" name="claveTarjeta" id="claveTarjeta">
                 </div>
 
-                <!-- input number -->
-                <div class="añoVencTarjeta">
-                    <label for="añoTarjeta">Año de vencimiento</label>
-                    <input type="Tarjeta" name="añoTarjeta" id="añoTarjeta">
-                </div>
 
 
                 <!-- boton submit o enviar -->
 
-                <div class="pagar">
+                <input type="button" id="pago" class="btn btn-primary" value="Pagar">
+
+
+                <!--    <div class="pagar">
                     <button type="pagar">Pagar</button>
-                </div>
+                </div> -->
 
             </form>
 

@@ -1,5 +1,8 @@
-
 /*Esta app va orientada al html que hice en DW. La idea es poder ingresar datos personales, chequear disponibilidad de cursos, pagar, etc*/
+
+
+
+
 
 /* 
 
@@ -203,14 +206,13 @@ while (consulta != "esc") {
         consulta = prompt("Para continuar con la inscripción escribe esc")
     }
  
- */
-
+*/
 
 
 
 /* aplicando objetos, arrays y metodos  */
 
-
+/*
     
 class Curso {
 
@@ -224,7 +226,8 @@ class Curso {
     }
    
    /* El length me va a contar los elementos del array y devuelve un numero que me sirve para el nro de item del nuevo curso que se ingrese. */
-
+/*
+   
    asignarId(array) {
         this.id = array.length;
     }
@@ -255,10 +258,11 @@ const cursos = [
 
 console.log(cursos);
 
-
+*/
 
 /* Consulto el valor del curso (Luego este prompt se reemplaza en el html por una serie de radios con los nombres de los cursos). */
 
+/*
 let consultaCurso = prompt('Qué idioma te gustaría aprender?');
 
 const busqueda = cursos.filter((curso)=>curso.idioma.toLowerCase().includes(consultaCurso.toLowerCase()));
@@ -277,11 +281,12 @@ else{
     
 }
 
-
+*/
 
 
 /* Para consultar cursos disponibles por turno (en el html falta agregar la seccion "seleccione turno") */
 
+/*
 let consultaTurno = prompt('En que turno te gustaría cursar?');
 
 const busqueda2 = cursos.filter((curso)=>curso.turno.toLowerCase().includes(consultaTurno.toLowerCase()));
@@ -294,12 +299,13 @@ if(consultaTurno.length == 0){
 }
 
 
-
+*/
 
 /* para uso del administrador del sitio */
 
 //--Pedir que se ingresen cursos nuevos, transformarlos en un array (con split que me devuelve un array) y sumarlos al array cursos---//
 
+/*
 let continuar = true;
 
 while (continuar) {
@@ -320,6 +326,232 @@ while (continuar) {
     console.log(cursos)
 } 
 
+*/
 
 
 
+/* 
+const btnPago = document.getElementById('pago'),
+nombre = document.getElementById('full name'),
+mail = document.getElementById('mail'),
+dni = document.getElementById('numeroDNI'),
+cursoAleman = document.getElementById('aleman'),
+radiosCursos = document.querySelectorAll("div.curso input[type='radio']"),
+formaPago = document.getElementById('formaPago'),
+tarjeta = document.getElementById('tarjeta'); */
+
+/* Para que ingresen los administradores a la parte de ingresar nuevos cursos y se logeen  */
+/* modalEl=document.getElementById(modalLogin),
+modal = new bootstrap.Modal(modalEl);
+
+console.log(radiosCursos);
+ */
+
+/* 
+
+function mensajePersonalizado(nombre){
+    alert("hola " + nombre + "! Estas seguro que quieres pagar?")
+}
+btnPago.addEventListener('click', ()=>{
+    let nombreUser = nombre.value;
+    mensajePersonalizado(nombreUser);
+})  
+
+
+
+radiosCursos.forEach(item => {
+    item.addEventListener('click', ()=>{
+        alert('Seleccionaste el curso ' + item.value)
+    })
+    
+})
+
+
+nombre.onchange = () => {
+    let nombreCompleto= nombre.value
+}
+
+ */
+
+
+
+
+
+
+
+class Curso {
+
+    constructor(idioma, duracion, turno, valor, id) {
+        this.idioma = idioma;
+        this.duracion = parseInt(duracion);
+        this.turno = turno;
+        this.valor = parseInt(valor);
+        this.id = id;
+        this.vendido = false;
+    }
+
+    //El length me va a contar los elementos del array y devuelve un numero que me sirve para el nro de item del nuevo curso que se ingrese. */
+
+
+    asignarId(array) {
+        this.id = array.length;
+    }
+
+    sumarIVA() {
+        this.valor = this.valor * 1.21;
+    }
+
+    vender() {
+        this.vendido = true;
+    }
+
+}
+
+
+const cursos = [
+    new Curso('ingles', '9', 'mañana', 25000, 1),
+    new Curso('frances', '6', 'mañana', 32000, 2),
+    new Curso('italiano', '12', 'tarde', 45000, 3),
+    new Curso('chino', '23', 'noche', 62000, 4),
+    new Curso('aleman', '10', 'noche', 34000, 5),
+    new Curso('portugues', '15', 'tarde', 27000, 6)
+]
+
+//let atributo = cursos[2].valor;
+//console.log(atributo)
+
+
+//traigo los elementos que voy a usar del DOM
+
+const nombreUsuario = document.getElementById('fullName'),
+    mail = document.getElementById('mail'),
+    password = document.getElementById('pass'),
+    radiosCursos = document.querySelectorAll("div.curso input[type='radio']"),
+    formaPago = document.getElementById('formaPago'),
+    tarjeta = document.getElementById('tarjetas'),
+    numTarjeta = document.getElementById('numeroTarjeta'),
+    clave = document.getElementById('claveTarjeta'),
+    añoTarjeta = document.getElementById('añoTarjeta'),
+    botonAbrirAlert = document.getElementById('botonInfo'),
+    botonPagar = document.getElementById('pago');
+
+
+
+//clase constructora de objetos usuarios
+
+/* class usuarioConsulta {
+    constructor(nombre, mail, pass, curso, formaPago, tarjeta, numTarjeta, mes, año) {
+        this.nombre = nombre;
+        this.mail = mail;
+        this.pass = parseInt(pass);
+        this.curso = curso;
+        this.formaPago = formaPago;
+        this.tarjeta = tarjeta;
+        this.numTarjeta = numTarjeta;
+        this.mes = mes;
+        this.año = año;
+    }
+}
+ */
+
+//evento para hacer clic sobre el radio y que haga algo
+
+radiosCursos.forEach(item => {
+    item.addEventListener('click', () => {
+        let radioSeleccionado = item.value;
+
+        encontrado = cursos.find(curso => curso.idioma == radioSeleccionado);
+
+    })
+})
+
+let encontrado;
+
+
+function guardarDatos(storage) {
+
+    let user = document.getElementById('fullName').value;
+    let mail = document.getElementById('mail').value;
+    let pass = document.getElementById('pass').value;
+    let curso = document.getElementById(encontrado.idioma);
+  
+
+    const usuario = {
+        'user': user,
+        'mail': mail,
+        'pass': pass,
+        'curso': encontrado.idioma
+       
+    }
+
+    storage.setItem('usuario', JSON.stringify(usuario));
+}
+
+
+botonAbrirAlert.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            Swal.fire({
+                title: `<p> Hola ${nombreUsuario.value}! Revisa tus datos antes de continuar.</p>`,
+                html: `<li>Tu nombre completo: ${nombreUsuario.value}</li> <li>Tu mail: ${mail.value}</li> <li>Elegiste el curso: ${encontrado.idioma}</li><li>Duracion: ${encontrado.duracion} meses</li><li>Valor total: $${encontrado.valor}</li>`,
+                showDenyButton: true,
+                showCancelButton: false,
+                confirmButtonText: 'Guardar y continuar',
+                denyButtonText: 'Continuar sin guardar',
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.value) {
+                    Swal.fire('Datos guardados!', '', 'success')
+
+                  guardarDatos(localStorage);
+
+                } else if (result.isDenied) {
+                    Swal.fire('Tus datos no fueron guardados', '', 'info');
+
+                    guardarDatos(sessionStorage);
+
+                }})
+            })
+
+
+            botonPagar.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                Swal.fire({
+                    title: `<p> Revisa tus datos antes de confirmar el pago.</p>`,
+                    html: `<li>Medio de pago: ${formaPago.value}</li> <li>Tarjeta: ${tarjeta.value}</li> <li>Numero de tarjeta: ${numTarjeta.value}</li> <li>Clave Tarjeta: ${clave.value}</li>`,
+                    showDenyButton: false,
+                    showCancelButton: true,
+                    confirmButtonText: 'Confirma el pago?',
+                    denyButtonText: `Don't save`,
+                }).then((result) => {
+                    /* Read more about isConfirmed, isDenied below */
+                    if (result.value) {
+                        Swal.fire('El pago se ha realizado!', '', 'success')
+                        sessionStorage.setItem('formaPago', formaPago.value);
+                        sessionStorage.setItem('tarjeta', tarjeta.value);
+                        sessionStorage.setItem('numero tarjeta', numTarjeta.value);
+                        sessionStorage.setItem('Clave tarjeta', clave.value);
+
+                    } else if (result.isDenied) {
+                        Swal.fire('Changes are not saved', '', 'info')
+                    }
+                })
+            })
+
+
+          //  recupero los datos que decidio guardar el usuario en el Local.
+
+           window.onload = ()=>{
+            let usuarioEnStorage = JSON.parse(localStorage.getItem('usuario'));
+            if(usuarioEnStorage){
+                Swal.fire(`<p> Tenes los siguientes datos cargados: </p><li> Nombre: ${usuarioEnStorage.user} </li></p><li> Mail: ${usuarioEnStorage.mail} </li></p><li> Contraseña: ${usuarioEnStorage.pass} </li></p><li> Curso seleccionado: ${usuarioEnStorage.curso} </li>`,);
+               
+            }else{
+                Swal.fire('No tenes datos de sesiones anteriores');
+            }
+          } 
+
+          //Me falta volver a rellenar los campos del formulario con los datos de la sesion anterior...
+
+          
