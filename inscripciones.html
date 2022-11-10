@@ -73,7 +73,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="consultas.html">CONSULTAS</a>
                         </li>
-
+                        <li class="nav-item">
+                            <button id="adm" type="button" class="btn btn-success">Administracion</button>
+                        </li>
 
                     </ul>
                 </div>
@@ -87,14 +89,6 @@
 
         <div class="section-1">
             <h1 class="subtitulo"> Cursos online las 24 hs </h1>
-
-
-            <button id="btnModalLogin" class="btn btn-outline-primary me-2 toggles" type="button" data-bs-toggle="modal"
-                data-bs-target="#modalLogin">Login</button>
-            <button id="btnLogout" class="btn btn-outline-secondary d-none toggles" type="button">Logout</button>
-            <p id="nombreUsuario" class="d-none toggles"></p>
-
-
         </div>
 
     </section>
@@ -182,7 +176,7 @@
                 <div class="nombre-completo">
                     <label for="full name">Nombre completo</label>
                     <!-- input text -->
-                    <input type="text" id="fullName">
+                    <input type="text" id="fullName" name="fullName">
                 </div>
 
 
@@ -231,6 +225,28 @@
                 </div>
 
 
+                <!-- input radio2 -->
+
+                <div class="turno">
+                    <fieldset>
+                        <legend>Selecione turno</legend>
+
+                        <div class="radios">
+
+                            <input type="radio" name="mañana" id="mañana" value="mañana">
+                            <label for="mañana">Mañana</label>
+
+                            <input type="radio" name="tarde" id="tarde" value="tarde">
+                            <label for="tarde">Tarde</label>
+
+                            <input type="radio" name="noche" id="noche" value="noche">
+                            <label for="noche">Noche</label>
+
+                        </div>
+                    </fieldset>
+                </div>
+
+
 
 
 
@@ -243,51 +259,40 @@
                     Consultar curso seleccionado
                 </button>
 
-              
+
 
                 <!-- input select -->
 
 
-                <select class="form-select form-select-lg" aria-label="Large select" id="formaPago">
-                    <option selected="">Elegí la forma de pago</option>
-                    <option value="Efectivo">Efectivo</option>
-                    <option value="Tarjeta">Tarjeta</option>
-                    <option value="Transferencia">Transferencia</option>
+                <select class="form-select form-select-lg" aria-label="Large select" id="moneda">
+                    <option selected="">moneda</option>
+                    <option value="ARS">Pesos</option>
+                    <option value="BRL">Reales</option>
+                    <option value="USD">Dolares</option>
+                    <option value="EUR">Euros</option>
                 </select>
 
 
                 <!-- input select -->
 
 
-                <select class="form-select form-select-lg" aria-label="Large select" id="tarjetas">
-                    <option selected="">Con que tarjeta desea abonar</option>
-                    <option value="Visa">Visa</option>
-                    <option value="Master">Mastercard</option>
-                    <option value="Amex">Amex</option>
+                <select class="form-select form-select-lg" aria-label="Large select" id="cuotas">
+                    <option selected="">Cantidad de cuotas</option>
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
                 </select>
-
-                <!-- input number -->
-                <div class="NumTarjeta">
-                    <label for="numeroTarjeta">Numero de Tarjeta</label>
-                    <input type="Tarjeta" name="numeroTarjeta" id="numeroTarjeta">
-                </div>
-
-                <!-- input number -->
-                <div class="claveVencTarjeta">
-                    <label for="claveTarjeta">Clave de 3 digitos</label>
-                    <input type="Tarjeta" name="claveTarjeta" id="claveTarjeta">
-                </div>
-
 
 
                 <!-- boton submit o enviar -->
 
-                <input type="button" id="pago" class="btn btn-primary" value="Pagar">
+                <input type="button" id="consultaPago" class="btn btn-primary" value="Consultar pago">
 
+                <p id='respuestaResultado'></p>
 
-                <!--    <div class="pagar">
-                    <button type="pagar">Pagar</button>
-                </div> -->
+                <button type="button" class="btn btn-primary" id="botonPago">Confirmar Inscripcion</button>
+
 
             </form>
 
@@ -361,6 +366,7 @@
                             <option name="Cupon">Cupon</option>
                         </select>
                     </form>
+
 
                 </div>
             </div>
